@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    transition: .3s var(--transition);
+}
+:root {
+    --bg: #fff;
+    --dimensions: 1048px;
+    --transition: cubic-bezier(.26, .62, 1, .6);
+    --shadow: 2px -1px 20px 6px rgba(0, 0, 0, .08);
+}
+html,body {width: 100%;height: 100%;}
+img {object-fit: cover;}
+button {outline: none;border: 0;}
+button:hover, .wrapper > .container > nav > .navigation > ul > li:hover {cursor: pointer;}
+::-webkit-scrollbar {display: none;}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
+    overflow: hidden;
+    background: var(--bg);
+}
+.wrapper > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--dimensions);
+    height: 100%;
+    padding: 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: var(--dimensions);
+    min-width: var(--dimensions);
+}
+.wrapper > .container span.title {
+    display: flex;
+    align-items: start;
+    font-size: 24px;
+    font-weight: 700;
+}
+.wrapper > .container > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.wrapper > .container > nav > .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+.wrapper > .container > nav > .logo > img {
+    width: 100%;
+    height: 100%;
+}
+.wrapper > .container > nav > .navigation {
+    height: 100%;
+}
+.wrapper > .container > nav > .navigation > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px;
+}
+.wrapper > .container > nav > .navigation > ul > li {
+    list-style: none;
+}
+.wrapper > .container > nav > .navigation > ul > li:not(.active) {
+    color: rgba(0, 0, 0, .45);
+}
+.wrapper > .container > .surveys {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    gap: 20px;
+}
+.wrapper > .container > .surveys > .list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.wrapper > .container > .surveys > .list > .survey {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 350px;
+    padding: 18px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px 1px rgba(46, 184, 151, 0.30);
+    background: var(--bg);
+}
+.wrapper > .container > .surveys > .list > .survey > .cover {
+    width: 50%;
+}
+.wrapper > .container > .surveys > .list > .survey > .cover > img {
+    width: 100%;
+}
+.wrapper > .container > .surveys > .list > .survey > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 15px;
+}
+.wrapper > .container > .surveys > .list > .survey > .info > span {
+    text-align: start;
+    font-size: 17px;
+    font-weight: 700;
+}
+.wrapper > .container > .surveys > .list > .survey > .info > p {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+.wrapper > .container > .surveys > .list > .survey > .info > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    color: #fff;
+    padding: 12px 17px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    background: #7FE46B;
+}
